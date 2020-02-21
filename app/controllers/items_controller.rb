@@ -29,6 +29,12 @@ class ItemsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @item.destroy
+    redirect_to department_items_path(@item)
+  end
+
   
 
   private

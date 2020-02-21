@@ -5,8 +5,5 @@
 <br>
 <br>
 <% @items.each do |item| %>
-  <h5><%= item.name %><h5>
-  <p><%= item.price %><p>
-  <p><%= item.sku %><p>
-  <p><%= item.description %><p>
+  <h5><%= link_to "#{item.name}", department_item_path(@department, item) %><h5><p>$<%= item.price %><p>
   <% end %>
