@@ -1,2 +1,12 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<h1><%= @department.name.upcase %></h1>
+<%# Note add nav bar with CRUD functions here %>
+<hr>
+<%= link_to "New Item", new_department_item_path%>
+<br>
+<br>
+<% @items.each do |item| %>
+  <h5><%= item.name %><h5>
+  <p><%= item.price %><p>
+  <p><%= item.sku %><p>
+  <p><%= item.description %><p>
+  <% end %>
