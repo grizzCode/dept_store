@@ -1,0 +1,5 @@
+<h1>Frontcountry.com</h1>
+<hr>
+<% @departments.each do |department|%>
+  <h2><%=link_to "#{department.name}",department_items_path(department) %></h2>
+<% end %>
