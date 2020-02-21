@@ -1,3 +1,5 @@
   <hr>
-  <%= link_to "Edit Item", edit_department_item_path(@department)%>  <%= link_to "Delete Item", department_item_path(@department,@item),method: :delete%>
+  <%= link_to "Edit Item", edit_department_item_path(@department)%>  
+  <%= link_to "Delete Item", department_item_path(@department,@item),method: :delete%>
+  <%= link_to "Back", department_items_path(@department) %>
   <hr>

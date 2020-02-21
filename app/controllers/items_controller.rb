@@ -9,10 +9,12 @@ class ItemsController < ApplicationController
   end
 
   def new
+    
   end
 
   def create
-    if @item.save(items_params)
+    @item = @department.items.new(items_params)
+    if @item.save
       redirect_to [@department, @item]
     else
       render :new
@@ -48,7 +50,8 @@ class ItemsController < ApplicationController
   end
 
   def items_params
-    params.require(:department).permit(:name, :price, :sku, :description)
+     params.require(:item).permit(:name, :price, :sku, :description)
+    
   end
 
 end

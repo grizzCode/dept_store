@@ -1,6 +1,6 @@
-<h3>Create New Item</h3>
+
 <hr>
-<%= link_to "Back", department_items_path(@department) %>
+<%= link_to "Back", department_item_path(@department, @item) %>
 <hr>
 <%= form_for [@department, @item] do |f| %>
   <%= f.label :name %>

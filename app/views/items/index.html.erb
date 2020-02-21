@@ -1,9 +1,9 @@
-<h1><%= @department.name.upcase %></h1>
+<h3><%= @department.name.upcase %></h3>
 <%# Note add nav bar with CRUD functions here %>
 <hr>
-<%= link_to "New Item", new_department_item_path%>
-<br>
+<%= link_to "New Item", new_department_item_path%> <%= link_to "Main Menu", departments_path %>
+<hr>
 <br>
 <% @items.each do |item| %>
-  <h5><%= link_to "#{item.name}", department_item_path(@department, item) %><h5><p>$<%= item.price %><p>
+  <h4><%= link_to "#{item.name}", department_item_path(@department, item) %><h4><p>$<%= item.price %><p>
   <% end %>
